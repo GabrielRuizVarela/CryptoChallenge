@@ -1,4 +1,3 @@
-import theme from '../../theme/theme';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import styled from 'styled-components';
 
@@ -7,7 +6,7 @@ export const TopBar = styled(View)`
   justify-content: space-between;
   align-items: center;
   padding: 60px 24px 34px 24px;
-  background-color: ${theme.colors.primary};
+  background-color: ${({theme}) => theme.colors.primary};
   border-bottom: 1px solid black;
 `;
 export const Title = styled(Text)`
@@ -24,7 +23,7 @@ export const AvatarImg = styled(Image)`
 
 export const AddCryptoText = styled(Text)`
   font-size: 16px;
-  color: ${theme.colors.primary};
+  color: ${({theme}) => theme.colors.primary};
   text-align: center;
 `;
 

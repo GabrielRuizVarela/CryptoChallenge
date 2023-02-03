@@ -1,4 +1,3 @@
-import theme from '../../theme/theme';
 import {Text, View} from 'react-native';
 import {Platform} from 'react-native';
 import styled from 'styled-components';
@@ -10,7 +9,7 @@ export const CryptoContainer = styled(View)`
   margin: 0px 24px;
   padding: 30px 0px;
   border-bottom-width: 1px;
-  border-color: ${theme.colors.gray};
+  border-color: ${({theme}) => theme.colors.gray};
 `;
 
 export const CryptoInfo = styled(View)`
@@ -29,7 +28,7 @@ export const CryptoName = styled(Text)`
 
 export const CryptoSymbol = styled(Text)`
   font-size: 14px;
-  color: ${theme.colors.darkGray};
+  color: ${({theme}) => theme.colors.darkGray};
 `;
 
 export const CryptoPrice = styled(View)`
@@ -43,8 +42,8 @@ export const CryptoPriceText = styled(Text)`
 `;
 
 export const CryptoPercent = styled(Text)<{percent: number}>`
-  color: ${props =>
-    props.percent > 0 ? theme.colors.green : theme.colors.red};
+  color: ${({percent, theme}) =>
+    percent > 0 ? theme.colors.green : theme.colors.red};
 `;
 export const PercentArrow = styled(View)`
   padding-right: 2px;
