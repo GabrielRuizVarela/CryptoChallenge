@@ -1,7 +1,7 @@
 import List from "../components/List";
 import CoinData from "../types/CoinData";
 import React from "react";
-import { FlatList, Image, Text, View } from "react-native";
+import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
 import styled from "styled-components";
 
 const cryptos: CoinData[] = [
@@ -47,6 +47,16 @@ const Title = styled(Text)`
   color: white;
 `;
 
+const AddCryptoText = styled(Text)`
+  font-size: 16px;
+  color: rgb(51,89,118);
+  text-align: center;
+`;
+
+const TouchableAddCrypto = styled(TouchableOpacity)`
+  margin: 40px;
+`;
+
 export default function CryptoList() {
 	return (
 		<>
@@ -54,11 +64,16 @@ export default function CryptoList() {
 				<Title>CryptoTracker Pro</Title>
 				<Image source={require("../assets/img/avatar.png")} />
 			</TopBar>
-			<FlatList
-				data={cryptos}
-				renderItem={({ item }) => <List item={item} />}
-				keyExtractor={(item) => item.id}
-			/>
+			<View>
+				<FlatList
+					data={cryptos}
+					renderItem={({ item }) => <List item={item} />}
+					keyExtractor={(item) => item.id}
+				/>
+				<TouchableAddCrypto>
+					<AddCryptoText>+ Add a Cryptocurrency</AddCryptoText>
+				</TouchableAddCrypto>
+			</View>
 		</>
 	);
 }
