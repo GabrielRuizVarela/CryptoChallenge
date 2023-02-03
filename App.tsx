@@ -19,7 +19,7 @@ import {
 	useColorScheme,
 } from "react-native";
 
-import CryptoList from "./src/components/CryptoList";
+import CryptoList from "./src/containers/CryptoList";
 
 const Stack = createNativeStackNavigator();
 
