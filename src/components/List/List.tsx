@@ -30,11 +30,7 @@ const List = ({item}: {item: CoinData}) => (
       <CryptoPriceText>${item.price}</CryptoPriceText>
       <CryptoPercent percent={item.percent}>
         <PercentArrow>
-          {item.percent > 0 ? (
-            <Image source={arrowUp} />
-          ) : (
-            <Image source={arrowDown} />
-          )}
+          <Image source={item.percent > 0 ? arrowUp : arrowDown} />
         </PercentArrow>
         <Text>{item.percent}%</Text>
       </CryptoPercent>
