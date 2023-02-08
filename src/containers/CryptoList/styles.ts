@@ -7,12 +7,12 @@ export const TopBar = styled(View)`
   align-items: center;
   padding: 60px 24px 34px 24px;
   background-color: ${({theme}) => theme.colors.primary};
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid ${({theme}) => theme.colors.black};
 `;
 export const Title = styled(Text)`
   font-size: 20px;
   font-weight: bold;
-  color: white;
+  color: ${({theme}) => theme.colors.white};
 `;
 
 export const AvatarImg = styled(Image)`
