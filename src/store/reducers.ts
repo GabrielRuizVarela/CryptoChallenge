@@ -12,6 +12,12 @@ const fetchSlice = createSlice({
     builder.addCase(fetchCryptoWithSymbol.fulfilled, (state, action) => {
       state.push(action.payload);
     });
+    builder.addCase(fetchCryptoWithSymbol.rejected, (state, action) => {
+      console.log(action.error.message); // TODO: Add error handling
+    });
+    builder.addCase(fetchCryptoWithSymbol.pending, () => {
+      console.log('Loading...'); // TODO: Add loading state
+    });
   },
 });
 
