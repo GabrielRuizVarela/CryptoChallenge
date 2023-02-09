@@ -19,6 +19,7 @@ const CryptoList = () => {
     dispatch(fetchCryptoWithSymbol('eth'));
     dispatch(fetchCryptoWithSymbol('xrp'));
   };
+
   return (
     <>
       <TopBar>
