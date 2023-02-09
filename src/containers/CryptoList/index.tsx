@@ -1,4 +1,4 @@
-import List from '../../components/List/List';
+import List from '../../components/List';
 import {useAppDispatch, useAppSelector} from '../../hooks/reduxHooks';
 import {fetchCryptoWithSymbol} from '../../store/actions';
 import {

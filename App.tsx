@@ -1,4 +1,4 @@
-import CryptoList from './src/containers/CryptoList/CryptoList';
+import CryptoList from './src/containers/CryptoList';
 import store from './src/store/store';
 import theme from './src/theme/theme';
 import {NavigationContainer} from '@react-navigation/native';
