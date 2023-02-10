@@ -12,7 +12,7 @@ import React from 'react';
 import {FlatList, View} from 'react-native';
 
 const CryptoList = () => {
-  const {cryptos: fetchCrypto} = useAppSelector(state => state);
+  const fetchCrypto = useAppSelector(({cryptos}) => cryptos);
   const dispatch = useAppDispatch();
   const AddCrypto = () => {
     dispatch(fetchCryptoWithSymbol('btc'));
