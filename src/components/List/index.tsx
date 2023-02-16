@@ -1,3 +1,5 @@
+import arrowDown from '../../assets/img/arrow-down.png';
+import arrowUp from '../../assets/img/arrow-up.png';
 import CoinData from '../../types/CoinData';
 import {
   CryptoContainer,
@@ -9,25 +11,22 @@ import {
   CryptoSymbol,
   CryptoText,
   PercentArrow,
+  SymbolImage,
 } from './styles';
 import React from 'react';
 import {Image, Text} from 'react-native';
 
-// TODO: Replace when calling API
-const arrowDown = require('../../assets/img/arrow-down.png');
-const arrowUp = require('../../assets/img/arrow-up.png');
-
 const List = ({item}: {item: CoinData}) => (
   <CryptoContainer>
     <CryptoInfo>
-      <Image source={item.img} />
+      <SymbolImage source={{uri: item.img}} />
       <CryptoText>
         <CryptoName>{item.name}</CryptoName>
         <CryptoSymbol>{item.symbol}</CryptoSymbol>
       </CryptoText>
     </CryptoInfo>
     <CryptoPrice>
-      <CryptoPriceText>${item.price}</CryptoPriceText>
+      <CryptoPriceText>{item.price}</CryptoPriceText>
       <CryptoPercent percent={item.percent}>
         <PercentArrow>
           <Image source={item.percent > 0 ? arrowUp : arrowDown} />

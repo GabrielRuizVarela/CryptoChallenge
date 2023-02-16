@@ -4,7 +4,7 @@ type CoinData = {
   symbol: string;
   price: number;
   percent: number;
-  img: any;
+  img: string;
 };
 
 export default CoinData;

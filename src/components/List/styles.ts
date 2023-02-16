@@ -1,4 +1,4 @@
-import {Text, View} from 'react-native';
+import {Image, Text, View} from 'react-native';
 import {Platform} from 'react-native';
 import styled from 'styled-components';
 
@@ -15,6 +15,11 @@ export const CryptoContainer = styled(View)`
 export const CryptoInfo = styled(View)`
   flex-direction: row;
   align-items: center;
+`;
+
+export const SymbolImage = styled(Image)`
+  width: 50px;
+  height: 50px;
 `;
 
 export const CryptoText = styled(View)`
